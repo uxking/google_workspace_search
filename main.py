@@ -26,7 +26,7 @@ def parse_data(data) -> dict:
 
 # function takes an a list and outputs it to a file
 def write_file(data) -> None:
-    with open("google_workspace_apps/output.json", "w") as output:
+    with open("google_workspace_search/output.json", "w") as output:
         json.dump(data, output)
 
 
@@ -71,7 +71,7 @@ SEID = "f748536010c774a1b"
 URL = "https://customsearch.googleapis.com/customsearch/v1?c2coff=0&cx=f748536010c774a1b&filter=1&num=1&q="
 KEY = "[yourkey]"  # this is safe to pass in the url per google.
 
-apps = import_data("google_workspace_apps/oauth_data.csv")
+apps = import_data("google_workspace_search/oauth_data.csv")
 
 app_ids = parse_data(apps)
 app_list_final = search_data(app_ids)
